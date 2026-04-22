@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Колба (тіло) -->
+    <path
+        android:fillColor="#D4AF37"
+        android:pathData="M44,30 L44,55 L28,80 Q24,88 34,92 L74,92 Q84,88 80,80 L64,55 L64,30 Z"/>
+
+    <!-- Рідина всередині колби -->
+    <path
+        android:fillColor="#7B2D8B"
+        android:pathData="M38,68 Q30,80 34,90 L74,90 Q78,80 70,68 Z"/>
+
+    <!-- Бульбашка 1: cx=46, cy=78, r=4 -->
+    <path
+        android:fillColor="#E040FB"
+        android:pathData="M42,78 A4,4 0 1,0 50,78 A4,4 0 1,0 42,78 Z"/>
+
+    <!-- Бульбашка 2: cx=60, cy=82, r=2.5 -->
+    <path
+        android:fillColor="#CE93D8"
+        android:pathData="M57.5,82 A2.5,2.5 0 1,0 62.5,82 A2.5,2.5 0 1,0 57.5,82 Z"/>
+
+    <!-- Бульбашка 3: cx=55, cy=72, r=3 -->
+    <path
+        android:fillColor="#E040FB"
+        android:pathData="M52,72 A3,3 0 1,0 58,72 A3,3 0 1,0 52,72 Z"/>
+
+    <!-- Горлечко колби -->
+    <path
+        android:fillColor="#C8A82E"
+        android:pathData="M43,18 L65,18 L65,32 L43,32 Z"/>
+
+    <!-- Корок -->
+    <path
+        android:fillColor="#8B5E3C"
+        android:pathData="M45,12 L63,12 L65,20 L43,20 Z"/>
+
+    <!-- Зірка ліворуч -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M20,35 L22,40 L27,40 L23,43 L25,48 L20,45 L15,48 L17,43 L13,40 L18,40 Z"/>
+
+    <!-- Зірка праворуч -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M82,28 L83.5,32 L88,32 L84.5,34.5 L86,38.5 L82,36 L78,38.5 L79.5,34.5 L76,32 L80.5,32 Z"/>
+
+</vector>

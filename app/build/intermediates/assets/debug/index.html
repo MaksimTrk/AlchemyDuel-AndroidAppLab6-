@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Alchemy Duel</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <div id="prologue-container" class="prologue-overlay">
+        <iframe id="prologue-video" 
+        src="https://www.youtube.com/embed/17Xx_PjXMlI?enablejsapi=1&autoplay=1&controls=0&mute=0&rel=0" 
+        frameborder="0" 
+        allow="autoplay; encrypted-media">
+</iframe>
+
+        <button id="skip-prologue" onclick="endPrologue()">Skip </button>
+    </div> -->
+    <div id="main-menu" class="menu-overlay">
+        <div class="menu-content">
+            <h1>Alchemy Duel</h1>
+            
+            <button onclick="startGame()">Play</button>
+            <button onclick="changeName()">Change Name</button>
+            <button onclick="showAbout()">About / Version</button>
+        </div>
+    </div>
+
+    <div id="about-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>About Alchemist Duel</h2>
+            <p><b>Version:</b> 1.2.0</p>
+            <ul>
+                <li>Додано систему босів та міньйонів.</li>
+                <li>Виправлено баги з блокуванням карт.</li>
+                <li>Додано систему рецептів та щитів.</li>
+            </ul>
+            <button onclick="closeAbout()">Close</button>
+        </div>
+    </div>
+    <div id="name-modal" class="modal hidden">
+        <div class="modal-content name-setup">
+            <h2>Identify Yourself</h2>
+            <p>Write your name in the Alchemist Registry:</p>
+            <input type="text" id="player-name-input" maxlength="15" placeholder="Enter name...">
+            <div class="modal-buttons">
+                <button onclick="saveName()">Confirm</button>
+                <button onclick="closeNameModal()" class="btn-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-container">
+        <div class="stats">
+            <div class="stat-box">
+                <div id="player-name-label"></div>
+                <div class="hp-bar"><div id="player-hp-fill" class="hp-fill"></div></div>
+                <span id="player-hp-text">100/100</span>
+                <div id="player-effects" style="display: flex; gap: 5px; margin-top: 5px; min-height: 24px;"></div>
+            </div>
+
+            <div id="book-container" onclick="toggleRecipeBook()">
+                <img src="assets/book_texture.png" id="book-button" alt="Recipes">
+            </div>
+
+            <div class="stat-box">
+                <div id="enemy-name-label"></div>
+                <div class="hp-bar"><div id="enemy-hp-fill" class="hp-fill"></div></div>
+                <span id="enemy-hp-text">100/100</span>
+            </div>
+        </div>
+
+        <div class="battle-arena">
+            <div id="player-sprite">🧙‍♂️</div>
+            
+            <div id="log">Get ready for the duel! Choose 2 ingredients.</div>
+            
+            <div class="enemy-group">
+                <div id="enemy-sprite">👹</div>
+                
+                <div id="minion-container" style="display: none;">
+                    <div class="minion-stats">
+                        <span id="minion-name">Minion</span>
+                        <div class="hp-bar small-bar">
+                            <div id="minion-hp-fill" class="hp-fill minion-fill"></div>
+                        </div>
+                    </div>
+                    <div id="minion-sprite"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="recipe-book" class="hidden">
+            <div class="book-body">
+                <span class="close-book" onclick="toggleRecipeBook()">&times;</span>
+                <h2 class="book-title">Grimoire</h2>
+                <div id="recipes-list"></div>
+            </div>
+        </div>
+
+        <div id="restart-container" style="display: none; text-align: center; margin-top: 20px;">
+            <button id="restart-btn" onclick="resetGame()" style="padding: 15px 30px; font-size: 1.2rem; cursor: pointer; background: #e94560; color: white; border: none; border-radius: 10px;">
+                Play Again
+            </button>
+        </div>
+
+        <div class="crafting-area">
+            <div class="slot" id="slot-1">?</div>
+            <div class="plus">+</div>
+            <div class="slot" id="slot-2">?</div>
+        </div>
+
+        <div id="hand" class="hand"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
